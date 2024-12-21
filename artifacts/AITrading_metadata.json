@@ -1293,11 +1293,11 @@
 			]
 		},
 		"contract-94900b201c.sol": {
-			"keccak256": "0xd0fe8c6a562f6ea75cac8fee0f734cd6a26fa0806e7d041a07f871bc0d609653",
+			"keccak256": "0x66fa16bd6befe4f2d164e5a9d4d3be7c9cb1faa458d772af90e947c3b53de4c2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e02a96b623c262e15c7be8c287ff8a10c882d99ee43c1783a71d9520c77d257a",
-				"dweb:/ipfs/QmZsqRnho6xT5i3HAsaojFdR3HVtgHFiAxUfbiymABNWiq"
+				"bzz-raw://3581254d46e1e9edc84217adc3ece8ee4dfdc9ef2196ea71eb4f6f83d2d05537",
+				"dweb:/ipfs/QmeqX1Z3E4sKrMounujsWQDMAmZUxkrU3LYd9eXV2Hvy7r"
 			]
 		}
 	},
