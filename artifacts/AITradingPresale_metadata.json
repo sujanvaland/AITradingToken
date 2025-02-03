@@ -13,8 +13,23 @@
 						"type": "address"
 					},
 					{
+						"internalType": "address",
+						"name": "_usdtTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_usdcTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_wethAddress",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
-						"name": "_tokenPrice",
+						"name": "_tokenPriceInUSDT",
 						"type": "uint256"
 					},
 					{
@@ -57,6 +72,19 @@
 				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "FundsWithdrawn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
 						"indexed": true,
 						"internalType": "address",
 						"name": "previousOwner",
@@ -78,7 +106,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "tokensSold",
+						"name": "totalTokensSold",
 						"type": "uint256"
 					}
 				],
@@ -118,10 +146,21 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
 				"name": "buyTokens",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -132,8 +171,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getTokenPrice",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "wethAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "getETHInUSDT",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -211,14 +256,14 @@
 						"type": "uint256"
 					}
 				],
-				"name": "setTokenPrice",
+				"name": "setTokenPriceInUSDT",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "tokenPrice",
+				"name": "tokenPriceInUSDT",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -262,6 +307,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "totalTokensSold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -276,7 +334,53 @@
 			},
 			{
 				"inputs": [],
+				"name": "usdcToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "usdtToken",
+				"outputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "wethAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "withdrawFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawUnsoldTokens",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -364,11 +468,11 @@
 			]
 		},
 		"presale.sol": {
-			"keccak256": "0x5afb7cca1f6630e6e5320a34a9afe64437efc16df43ec4418b36e058c999f848",
+			"keccak256": "0x4b2715f1e9ff679dc83e585d8dd95716ac3b49d71bd9a377451a71e297bd5b3f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://121cf39175a5fb6f21aba1a503db2e32906d248a4e3abaf20c0cef000cc40cc7",
-				"dweb:/ipfs/QmYSWNFLYbxYT5kj8N1166A6Q6S9FPRCnoBmS3S21dPXrU"
+				"bzz-raw://c77ab033231bc1d0a60c604f1035220c78a36e2a5d0e7986faf70d589b73fdf5",
+				"dweb:/ipfs/QmaWjnP5a3brx53Gm5y5TNWTzSzRqrV1d1wo6z77ub4w4q"
 			]
 		}
 	},
